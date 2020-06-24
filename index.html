@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Audio Player</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="gif/image" href="https://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Player-Audio-D-icon.png">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="main" id='main'>
+    </div>
+    <div class="player">
+        <div class="row1" id="row1">
+        </div>
+        <div id="songTitle">Song Title</div>
+        <div class="row2">
+            <div class="play">
+                <img src="https://image.flaticon.com/icons/svg/1262/1262150.svg" id='pre' onclick="prev()"   alt="Previous">
+                <img src="https://image.flaticon.com/icons/svg/1262/1262172.svg" id='play' onclick="playOrPauseSong()"  alt="Play or Pause">
+                <img src="https://image.flaticon.com/icons/svg/1262/1262170.svg" id='next' onclick="next()" alt="Next">
+            </div>
+            <div class="seek-bar">
+                <div class="handle">
+                    <div id="fill"></div>
+                </div>
+            </div>
+            <div class="mute">
+               <div class="time_and_speed">
+                    <div id="currentTime">00:00 / 00:00</div>
+                        <select class="dropdown" id="mySelect" onchange="speedFunction()">
+                            <option class="drop_item" value="normal">Normal Speed</option>
+                            <option class="drop_item" value="half">Half Speed</option>
+                            <option class="drop_item" value="double">Double Speed</option>
+                        </select>
+                </div> 
+                <div class="muteButtons">
+                    <img src="https://www.flaticon.com/premium-icon/icons/svg/2475/2475730.svg" id='decrease' onclick="decrease()" alt="Decrease">
+                    <img src="https://www.flaticon.com/premium-icon/icons/svg/2475/2475774.svg" id='mute' onclick="muted()" alt="Muted or Unmuted">
+                    <img src="https://www.flaticon.com/premium-icon/icons/svg/2475/2475672.svg" id='increase' onclick="increase()" alt="increase">
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
